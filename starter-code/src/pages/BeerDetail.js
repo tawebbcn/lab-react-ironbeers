@@ -2,20 +2,20 @@ import React, { Component } from 'react'
 import beerServices from '../services/BeerServices'
 import Header from '../components/Header';
 
-
-export default class RandomBeers extends Component {
+export default class BeerDetail extends Component {
     state={
         beers:null,
     }
-
     async componentDidMount(){
-        const randomBeer = await beerServices.getRandomBeer()
+        const {beerId}= this.props.match.params
+        const newBeer = await beerServices.getBeer(beerId)
+        console.log(newBeer)
         this.setState({
-            beers:randomBeer
+            beers:newBeer
         })
     }
     render() {
-        const {beers} =this.state
+        const {beers} = this.state
         if (beers){
             return (
                 

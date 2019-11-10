@@ -24,10 +24,12 @@ class Beers extends Component {
             {   beers ?
                 beers.map((beer,index)=>(
                 <article key={index}>
+                <Link to={`/beers/${beer._id}`}>
                   <img src={beer.image_url} alt=""/>
                   <p>{beer.name}</p>
                   <p>{beer.tagline}</p>
                   <p>{beer.contributed_by}</p>
+                  </Link>
                     
                 </article>   
                 )) : <p>Loading...</p>

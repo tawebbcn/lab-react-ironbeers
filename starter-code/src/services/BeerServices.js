@@ -14,6 +14,23 @@ constructor(){
            console.log(error)
        }
    }
+
+   getBeer= async (beerId) =>{
+       try{
+           const beers = await this.beerApi.get(`/beers/${beerId}`)
+           return beers.data
+       } catch(error){
+           console.log(error)
+       }
+   }
+   getRandomBeer = async() =>{
+       try{
+           const randomBeer = await this.beerApi.get('/beers/random')
+           return randomBeer.data
+       } catch(error){
+           console.log(error)
+       }
+   }
 }
 
 const beerServices= new BeerServices();

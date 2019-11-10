@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import Beers from './Beers';
+import React from 'react'
 import HomeDisplay from '../components/HomeDisplay';
 
 const Home = () => {

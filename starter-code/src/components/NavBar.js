@@ -10,7 +10,7 @@ const NavBar = () => {
             <li> <Link to='/beers'> Beers</Link></li>
 
 
-            <li> <Link to='/random-beer'> Random Beer</Link></li>
+            <li> <Link to='/beers/random'> Random Beer</Link></li>
             <li> <Link to='/new-beer'> New Beer</Link></li>
 
 
